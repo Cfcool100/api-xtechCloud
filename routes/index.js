@@ -32,6 +32,17 @@ router.get('/services', function(req, res) {
   });
 
 });
+router.get('/blog', function(req, res) {
+
+  Blog.find()
+  .then(function(services) {
+    res.json(services);
+  })
+  .catch(function(err) {
+    res.json({ error: err.message });
+  });
+
+});
 
 router.post('/contact', function(req, res) {
   let contact = new Contact({

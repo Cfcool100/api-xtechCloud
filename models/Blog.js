@@ -11,7 +11,7 @@ const Blog = mongoose.Schema({
     type: String,
     required: true,
   },
-  autthor: String,
+  author: String,
 
 })
 
